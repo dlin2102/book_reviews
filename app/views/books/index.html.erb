@@ -1,1 +1,11 @@
 <h1>Books</h1>
+
+<% @books.each do |book|%>
+
+<a href="/books/<%= book.id %>">
+  <%=book.title %>
+</a>
+<br/>
+<% end %>
+
+<%= link_to "Add to library", new_book_path %>
