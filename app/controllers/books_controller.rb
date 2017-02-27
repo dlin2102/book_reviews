@@ -4,9 +4,9 @@ class BooksController < ApplicationController
     @books = Book.all.order('title DESC')
   end
 
-def show
-   @book = Book.find(params[:id])
-end
+  def show
+    @book = Book.find(params[:id])
+  end
 
   def new
     @book = Book.new
