@@ -9,12 +9,11 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new
+    @book = current_user.books.new
   end
 
   def create
-    @book = Book.create!(book_params)
-
+    @book = current_user.books.create!(book_params)
     if @book.save
       redirect_to book_path(@book)
     else
