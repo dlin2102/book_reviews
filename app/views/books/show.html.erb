@@ -1,15 +1,38 @@
 <%= link_to "Back", books_path %>
-
+<br/>
+<br/>
+<div class = "row">
+  <div class = "col-md-4">
+  <%= image_tag @book.book_img.url(:book_show), class: "book-show"%>
+</div>
+<div class = "col-md-8">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <h1><%=@book.title%></h1>
-<h2><%=@book.author%></h2>
+<h3><%=@book.author%></h3>
 <br/>
 <p><%=@book.description%></p>
 <p>Category: <%=@book.category.name %>
 <br/>
 <br/>
-<% if user_signed_in? %>
-<% if @book.user_id == current_user.id %>
-<button><%=link_to "Edit Book", edit_book_path(@book)%></button>
-<button><%=link_to "Delete Book", book_path(@book), method: :delete, data: {confirm: "Are you sure?"}%></button>
-<% end %>
-<% end %>
+  <% if user_signed_in? %>
+  <% if @book.user_id == current_user.id %>
+  <button><%=link_to "Edit Book", edit_book_path(@book)%></button>
+  <button><%=link_to "Delete Book", book_path(@book), method: :delete, data: {confirm: "Are you sure?"}%></button>
+  <% end %>
+  <% end %>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+  
+</div>
+</div>
+<br/>
