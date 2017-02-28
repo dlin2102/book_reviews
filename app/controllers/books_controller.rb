@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all.order('title DESC')
+    @books = Book.all.order('author ASC, title ASC')
   end
 
   def show
@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = current_user.books.create!(book_params)
+    @book = current_user.books.new(book_params)
     @book.category_id = params[:category_id]
     if @book.save
       redirect_to book_path(@book)
