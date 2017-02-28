@@ -1,11 +1,14 @@
-<h1>Books</h1>
+<h1 class = "current-category"><%= params[:category]%></h1>
+<h2>Books</h2>
 
+
+<div class ="row">
 <% @books.each do |book|%>
-
 <a href="/books/<%= book.id %>">
-  <%=book.title %>
+  <%=image_tag book.book_img.url(:book_index) %>
 </a>
 <br/>
 <% end %>
+</div>
 
-<%= link_to "Add to library", new_book_path %>
+<button><%= link_to "Add to library", new_book_path %></button>

@@ -1,9 +1,11 @@
 <%= link_to "Back", books_path %>
+
 <h1><%=@book.title%></h1>
 <br/>
 <h2><%=@book.author%></h2>
 <br/>
 <p><%=@book.description%></p>
+<p>Category: <%=@book.category.name %>
 
 <% if user_signed_in? %>
 <% if @book.user_id == current_user.id %>

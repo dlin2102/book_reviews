@@ -10,10 +10,12 @@ class BooksController < ApplicationController
 
   def new
     @book = current_user.books.new
+    @categories = Category.all.map{|genre|[genre.name, genre.id]}
   end
 
   def create
     @book = current_user.books.create!(book_params)
+    @book.category_id = params[:category_id]
     if @book.save
       redirect_to book_path(@book)
     else
@@ -23,10 +25,12 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    @categories = Category.all.map{|genre|[genre.name, genre.id]}
   end
 
   def update
     @book = Book.find(params[:id])
+    @book.category_id = params[:category_id]
     if @book.update(book_params)
       redirect_to book_path(@book)
     else
@@ -42,7 +46,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :author, :description)
+    params.require(:book).permit(:title, :author, :description, :category_id, :book_img)
   end
 
 end
