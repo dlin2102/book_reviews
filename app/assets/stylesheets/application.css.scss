@@ -6,9 +6,6 @@
    width: 250px;
    margin-bottom: 20px;
  }
-body{
-  padding-top: 50px;
-}
  .book-show{
    height: 475px;
    width: 325px;
@@ -21,4 +18,27 @@ body{
 }
 .review{
   margin-top: 40px;
+}
+* {
+  margin: 0;
+}
+body {
+  height: 100%;
+}
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -142px;
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+.site-footer, .page-wrap:after {
+    height: 142px;
+  }
+.site-footer {
+  background-color: #81c9d9;
+  margin-top: 50px;
+  width: 100%;
 }
