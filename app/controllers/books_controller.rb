@@ -1,11 +1,16 @@
 class BooksController < ApplicationController
-
+before_action :authenticate_user!, only: [:new, :edit]
   def index
     @books = Book.all.order('author ASC, title ASC')
   end
 
   def show
     @book = Book.find(params[:id])
+    if @book.reviews.blank?
+      @average_review = 0;
+    else
+      @average_review = @book.reviews.average(:rating).round(2)
+    end
   end
 
   def new
