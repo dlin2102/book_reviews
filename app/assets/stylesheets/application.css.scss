@@ -4,9 +4,21 @@
  .book {
    height: 350px;
    width: 250px;
+   margin-bottom: 20px;
  }
-
+body{
+  padding-top: 50px;
+}
  .book-show{
    height: 475px;
    width: 325px;
  }
+.navbar{
+  position:fixed;
+  top: 0;
+  width: 100%;
+  background-color: #81c9d9;
+}
+.review{
+  margin-top: 40px;
+}

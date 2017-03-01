@@ -14,8 +14,6 @@
     <br/>
     <br/>
     <br/>
-    <br/>
-    <br/>
 
     <h1><%=@book.title%></h1>
     <h3><%=@book.author%></h3>
@@ -26,9 +24,6 @@
     </div>
     <br/>
     <p><%=@book.description%></p>
-    <p>Category: <%=@book.category.name %>
-      <br/>
-      <br/>
       <% if user_signed_in? %>
       <% if @book.user_id == current_user.id %>
       <button><%=link_to "Edit Book", edit_book_path(@book)%></button>
@@ -41,9 +36,12 @@
 
 
   <div class="row">
-    <div class="col-md-12">
-      <h2>Reviews for <%=@book.title%></h2>
+    <div class="col-md-6 col-md-offset-3">
+      <% if @book.reviews.blank? %>
+        <%else%>
+      <h2 class ="review">Reviews for <%=@book.title%></h2>
       <%= render @book.reviews %>
+      <% end %>
     </div>
   </div>
 
