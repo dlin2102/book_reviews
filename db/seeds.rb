@@ -28,3 +28,5 @@ categories = Category.create([
   {name:"Biographies"},
   {name:"History"}
   ])
+
+  
