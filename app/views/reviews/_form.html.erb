@@ -1,3 +1,4 @@
+
 <%= simple_form_for([@book, @book.reviews.build]) do |f|%>
 <div id="rating-form">
 <label>Rating</label>
@@ -5,6 +6,7 @@
 <%= f.input :comment%>
 <%= f.button :submit%>
 <% end %>
+
 
 <script>
 $('#rating-form').raty({

@@ -1,7 +1,12 @@
 class BooksController < ApplicationController
 before_action :authenticate_user!, only: [:new, :edit]
   def index
+    if params[:category].blank?
     @books = Book.all.order('author ASC, title ASC')
+  else
+    @category_id = Category.find_by(name: params[:category]).id
+    @books = Book.where(:category_id => @category_id).order("author ASC, title ASC")
+  end
   end
 
   def show

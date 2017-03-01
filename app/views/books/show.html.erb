@@ -1,19 +1,25 @@
 <%= link_to "Back", books_path %>
+
 <br/>
 <br/>
 <div class = "row">
+
   <div class = "col-md-4">
     <%= image_tag @book.book_img.url(:book_show), class: "book-show"%>
   </div>
+
   <div class = "col-md-8">
+
     <br/>
     <br/>
     <br/>
     <br/>
     <br/>
     <br/>
+
     <h1><%=@book.title%></h1>
     <h3><%=@book.author%></h3>
+
     <div>
       <strong><p>Average Review</p></strong>
       <div class="average-review-rating" data-score= <%= @average_review %></div>
