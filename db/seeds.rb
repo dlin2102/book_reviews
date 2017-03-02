@@ -29,7 +29,7 @@ categories = Category.create([
   {name:"History"}
   ])
 
-  books = ([{title: "Graceling", author: "Kristin Cashore", description: "", created_at: "2017-03-01 14:13:17", updated_at: "2017-03-01 14:13:17", user_id: 2, category_id: 2, book_img_file_name: "Graceling_cover.png", book_img_content_type: "image/png", book_img_file_size: 398359, book_img_updated_at: "2017-03-01 14:13:17"},
+  books = Book.create([{title: "Graceling", author: "Kristin Cashore", description: "", created_at: "2017-03-01 14:13:17", updated_at: "2017-03-01 14:13:17", user_id: 2, category_id: 2, book_img_file_name: "Graceling_cover.png", book_img_content_type: "image/png", book_img_file_size: 398359, book_img_updated_at: "2017-03-01 14:13:17"},
     {title: "Matilda", author: "Roald Dahl", description: "", created_at: "2017-02-27 20:23:42", updated_at: "2017-02-28 14:06:27", user_id: 1, category_id: 8, book_img_file_name: "matilda.jpg", book_img_content_type: "image/jpeg", book_img_file_size: 54337, book_img_updated_at: "2017-02-28 14:06:26"},
     {title: "Charlie and the Chocolate Factory", author: "Roald Dahl", description: "", created_at: "2017-02-27 20:22:37", updated_at: "2017-02-28 14:10:03", user_id: 1, category_id: 8, book_img_file_name: "Charliechocolate.jpg", book_img_content_type: "image/jpeg", book_img_file_size: 39242, book_img_updated_at: "2017-02-28 14:10:03"},
     {title: "The Kite Runner", author: " Khaled Hosseini", description: "", created_at: "2017-02-27 21:07:36", updated_at: "2017-02-28 14:11:30", user_id: 2, category_id: 7, book_img_file_name: "kite_runner.jpg", book_img_content_type: "image/jpeg", book_img_file_size: 43773, book_img_updated_at: "2017-02-28 14:11:30"},
