@@ -1,6 +1,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ // Nice use of @import and the boostrap gem for styling
+// One thing to address: When the window is sized all the way in, the nav inverts
+// but also covers some of the main
  .book {
    height: 350px;
    width: 250px;

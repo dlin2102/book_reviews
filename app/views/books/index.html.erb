@@ -1,10 +1,14 @@
-<h1 class = "current-category"><%= params[:category]%></h1>
-
+<%# use an if statement here to avoid generating a blank h1 in the case
+that there is no category filter applied %>
+<% if params[:category] %>
+  <h1 class = "current-category"><%= params[:category]%></h1>
+<% end %>
 
 
 <div class ="row">
 <% @books.each do |book|%>
 <div class = "col-md-3">
+  <%# Nice use of bootstrap for layout styling and responsiveness %>
 <a href="/books/<%= book.id %>">
   <%=image_tag book.book_img, class: "book" %>
 </a>
