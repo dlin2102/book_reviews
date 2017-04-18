@@ -1,5 +1,9 @@
 class BooksController < ApplicationController
 before_action :authenticate_user!, only: [:new, :edit]
+# Really interesting method here of using search filters and an adaptive
+# index view. You could have also set up routes and views for categories
+# that books would be nested within, but I like the decision here to just
+# use categories as a filter.
   def index
     if params[:category].blank?
     @books = Book.all.order('author ASC, title ASC')

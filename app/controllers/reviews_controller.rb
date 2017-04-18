@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 before_action :find_book
 before_action :authenticate_user!, only: [:new, :edit]
+# good use of before_action to enforce user authentication
 
 def new
   @review = Review.new

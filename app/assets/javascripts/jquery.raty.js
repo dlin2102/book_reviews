@@ -9,6 +9,9 @@
  *
  */
 
+// Because this is not a js created specific for this project but rather from a
+// third party, best practice would be to put it in vendor/assets/javascripts
+
 ;
 (function($) {
   'use strict';
