@@ -5,3 +5,5 @@ This is a book review app that give users the ability to:
 - filter books by categories.
 
 To start up this app, please type rails s in the terminal.
+
+I hope you enjoyed my app. Thank you for stopping by! =)
